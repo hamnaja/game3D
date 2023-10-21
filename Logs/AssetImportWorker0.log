@@ -1,0 +1,175 @@
+Using pre-set license
+Built from '2020.2/staging' branch; Version is '2020.2.6f1 (8a2143876886) revision 9052483'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 18363.1556; Version 1909; 64bit' Language: 'th' Physical Memory: 16345 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+E:\2020.2.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+E:/project_S/GameFight
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+58668
+Successfully changed project path to: E:/project_S/GameFight
+E:/project_S/GameFight
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 25.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.6f1 (8a2143876886)
+[Subsystems] Discovering subsystems at path E:/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/project_S/GameFight/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
+    Vendor:   
+    VRAM:     4017 MB
+    Driver:   31.0.15.3699
+Initialize mono
+Mono path[0] = 'E:/2020.2.6f1/Editor/Data/Managed'
+Mono path[1] = 'E:/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56896
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001232 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 26.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.995 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.091082 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.885 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 56.7 MB.
+System memory in use after: 56.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1544.
+Total: 1.918000 ms (FindLiveObjects: 0.133500 ms CreateObjectMapping: 0.040100 ms MarkObjects: 1.546500 ms  DeleteObjects: 0.196900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/UI
+  artifactKey: Guid(9b9116850b0777644a557e7faa502a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI using Guid(9b9116850b0777644a557e7faa502a51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '665ca80c8660d9120983a21d3c29ea34') in 0.010669 seconds
+  Import took 0.013018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.093236 seconds.
+  path: Assets/Script/SoundFx
+  artifactKey: Guid(c915dbbb35662584c934771fd4d615c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/SoundFx using Guid(c915dbbb35662584c934771fd4d615c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2359cd8fc1bfe9697ff485b2dcd51c45') in 0.011384 seconds
+  Import took 0.013712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.146805 seconds.
+  path: Assets/UI/Models
+  artifactKey: Guid(e6feca5ba40905b49bdf8418d75b11f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/Models using Guid(e6feca5ba40905b49bdf8418d75b11f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '794f48da0bdd94febbcf8c93b2a1e84e') in 0.010840 seconds
+  Import took 0.013983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 837.709685 seconds.
+  path: Assets/Animation
+  artifactKey: Guid(6cc3af1b0bc8ccf479a4c183d17463bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation using Guid(6cc3af1b0bc8ccf479a4c183d17463bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be50b2df3d75fc22f6148200d2967c2') in 0.010626 seconds
+  Import took 0.013287 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.266545 seconds.
+  path: Assets/Animation/New Animator Override Controller.overrideController
+  artifactKey: Guid(d9ca412931ac47445919ccef8e81bcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/New Animator Override Controller.overrideController using Guid(d9ca412931ac47445919ccef8e81bcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1c10c2bad751af6cc90471c98569dcb') in 0.056492 seconds
+  Import took 0.059274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.721711 seconds.
+  path: Assets/Animation/New Animator Controller.controller
+  artifactKey: Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/New Animator Controller.controller using Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8946bb61f19a038bd43f42853d4f84af') in 0.016105 seconds
+  Import took 0.018321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2284.262980 seconds.
+  path: Assets/Animation/New Animator Controller.controller
+  artifactKey: Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/New Animator Controller.controller using Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '527929ac13370029e5165e8326ca00ac') in 0.008145 seconds
+  Import took 0.014398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.804325 seconds.
+  path: Assets/Animation/player1.controller
+  artifactKey: Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/player1.controller using Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cab0fccb5c03db0dded89fd46dca7e9') in 0.014275 seconds
+  Import took 0.035868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.273652 seconds.
+  path: Assets/Animation/player.controller
+  artifactKey: Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/player.controller using Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f6c1cac0eaa9e72377ab9479e260b4') in 0.013015 seconds
+  Import took 0.019636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.127066 seconds.
+  path: Assets/Animation/player2.overrideController
+  artifactKey: Guid(d9ca412931ac47445919ccef8e81bcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/player2.overrideController using Guid(d9ca412931ac47445919ccef8e81bcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '891f7a4256690a794e9ac59c9247e6cc') in 0.011676 seconds
+  Import took 0.014752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 407.168703 seconds.
+  path: Assets/Animation/player2.overrideController
+  artifactKey: Guid(d9ca412931ac47445919ccef8e81bcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/player2.overrideController using Guid(d9ca412931ac47445919ccef8e81bcd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'player1': Transition 'AnyState -> DEAD' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+
+Asset 'player1': Transition 'AnyState -> HIT' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+
+ -> (artifact id: '9a2be3593dbadb4ebcab4e946ecfbc2e') in 0.005669 seconds
+  Import took 0.010506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000555 seconds.
+  path: Assets/Animation/player1.controller
+  artifactKey: Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animation/player1.controller using Guid(cce62111486c34741b254ab52ddf0270) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87c9a7068ebc52196468910086e2483f') in 0.012190 seconds
+  Import took 0.015614 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

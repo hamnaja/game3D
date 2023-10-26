@@ -9,7 +9,6 @@ public class StateBehavior : StateMachineBehaviour
     public float horizontalForce;
     public float verticalForce;
     protected Fighter1 fighter1;
-    protected Fighter2 fighter2;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (fighter1 == null)
@@ -19,18 +18,11 @@ public class StateBehavior : StateMachineBehaviour
         fighter1.currentState = behaviorState;
 
         fighter1.mybody.AddRelativeForce(new Vector3(0, verticalForce, 0));
-        if (fighter2 == null)
-        {
-            fighter2 = animator.GetComponent<Fighter2>();
-        }
-        fighter2.currentState = behaviorState;
-
-        fighter2.mybody.AddRelativeForce(new Vector3(0, verticalForce, 0));
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         fighter1.mybody.AddRelativeForce(new Vector3(horizontalForce,0,0));
-        fighter2.mybody.AddRelativeForce(new Vector3(horizontalForce,0,0));
+        
     }
 }

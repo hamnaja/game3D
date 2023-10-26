@@ -5,12 +5,8 @@ using UnityEngine;
 public class Fighter2 : MonoBehaviour
 {
     public static float MAX_HEALTH = 1000f;
-    public float health = MAX_HEALTH;//ค่าพลังชีวิตปัจจุบัน 1000/1000 => 900/1000
-    public string fighterName;//ตั้งชื่อให้กับผู้เล่น
-    public Fighter2 oponent;//อ้างอิง Object 
-
-    public bool enable;//กำหนดสถานะผู้เล่น 
-    //ต้นเริ่มต้นให้ยืน
+    public float health = MAX_HEALTH;
+    public Fighter2 oponent;
     public FighterState currentState = FighterState.IDLE;
     public Rigidbody mybody;
     protected Animator animator;
@@ -19,24 +15,13 @@ public class Fighter2 : MonoBehaviour
         mybody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
     }
-
     void Update()
     {
-        animator.SetFloat("HEALTH", healthPercent);
-        if (oponent != null)
-        {
-            animator.SetFloat("OPPONENT", oponent.healthPercent);
-        }
-        else
-        {
-            animator.SetFloat("OPPONENT", 1);
-        }
-
         if (health <= 0 && currentState != FighterState.DEAD)
         {
             animator.SetTrigger("DEAD");
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             animator.SetBool("WALK", true);
         }
@@ -44,7 +29,7 @@ public class Fighter2 : MonoBehaviour
         {
             animator.SetBool("WALK", false);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             animator.SetBool("WALK_BACK", true);
         }
@@ -54,42 +39,50 @@ public class Fighter2 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
-            Debug.Log("1");
+            Debug.Log("4");
             animator.SetTrigger("DEFEND");
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            Debug.Log("2");
+            Debug.Log("5");
             animator.SetTrigger("PUNCH");
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            Debug.Log("3");
+            Debug.Log("6");
             animator.SetTrigger("KICK");
         }
-
+        
     }
-
-    //ดึงพลังชีวิต 1000/1000 => 950/1000
-    public float healthPercent
+    public bool defending
     {
         get
         {
-            return health / MAX_HEALTH;
-            //1000/1000 = 1
+            return currentState == FighterState.DEFEND;
         }
     }
 
-    public Rigidbody body
+    public bool attacking => currentState == FighterState.KICK
+            || currentState == FighterState.PUNCH;
+    public virtual void TakeDamage2(float damage)
     {
-        get
+        if (defending)
         {
-            return this.mybody;
+            damage *= 0.2f;
+        }
+
+        if (health >= damage)
+        {
+            health -= damage;
+        }
+        else
+        {
+            health = 0;
+        }
+        if (health > 0)
+        {
+            Debug.Log("7");
+            animator.SetTrigger("HIT");
         }
     }
-    //ลดพลังชีวิตตาม damage ที่ได้รับ
-    //1000 -50 = 950
-    //1000 = 950
-
-
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StateBehavior2 : StateMachineBehaviour
 {
-    public FighterState behaviorState;
-    public AudioClip soundEffect;
-    public float horizontalForce;
-    public float verticalForce;
-    protected Fighter2 fighter2;
+    [SerializeField] private FighterState behaviorState;
+    [SerializeField] private AudioClip soundEffect;
+    [SerializeField] private float horizontalForce;
+    [SerializeField] private float verticalForce;
+    [SerializeField] private protected Fighter2 fighter2;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 

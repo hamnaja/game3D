@@ -1,24 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fighter2 : MonoBehaviour
 {
-    public static float MAX_HEALTH = 1000f;
-    public float health = MAX_HEALTH;
-    public Fighter2 oponent;
+    [SerializeField] private int MAX_HEALTH = 100;
+    public int CurrentHP2;
+    [SerializeField] private Fighter2 oponent;
+    [SerializeField] private GameObject playerAttackObj2;
+    [SerializeField] private float attackingTime = 0.5f;
+    [SerializeField] private float attackingTimeCount2;
     public FighterState currentState = FighterState.IDLE;
     public Rigidbody mybody;
-    protected Animator animator;
+    [SerializeField] private protected Animator animator;
+    [SerializeField] private int cooldown = 1;
+    [SerializeField] private int nextFireTime = 0;
+    [SerializeField] private HealthBar healthBar;
+    public CapsuleCollider capsule;
+    [SerializeField] private GameObject ENDGAME;
+    [SerializeField] private AudioSource PUNCH;
+    [SerializeField] private AudioSource KICK;
     void Start()
     {
+        ENDGAME.SetActive(false);
+        CurrentHP2 = MAX_HEALTH;
+        healthBar.SetMaxHealth(MAX_HEALTH);
         mybody = GetComponent<Rigidbody>();
+        playerAttackObj2.SetActive(false);
         animator = GetComponent<Animator>();
+        capsule = GetComponent<CapsuleCollider>();
     }
     void Update()
     {
-        if (health <= 0 && currentState != FighterState.DEAD)
-        {
+        if (CurrentHP2 <= 0 && currentState != FighterState.DEAD)
+        { 
+            ENDGAME.SetActive(true);
             animator.SetTrigger("DEAD");
         }
         if (Input.GetKey(KeyCode.D))
@@ -37,52 +54,49 @@ public class Fighter2 : MonoBehaviour
         {
             animator.SetBool("WALK_BACK", false);
         }
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.G) && Time.time > nextFireTime)
         {
-            Debug.Log("4");
+            nextFireTime = (int)Time.time + cooldown;
+            capsule.enabled = false;
+            Debug.Log("Collider.enabled = " + capsule);
             animator.SetTrigger("DEFEND");
         }
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyUp(KeyCode.G))
         {
+            capsule.enabled = true;
+        }
+            
+        if (Input.GetKeyDown(KeyCode.H) && Time.time > nextFireTime)
+        {
+            KICK.Play();
+            nextFireTime = (int)Time.time + cooldown;
+            playerAttackObj2.SetActive(true);
+            attackingTimeCount2 = attackingTime;
             Debug.Log("5");
             animator.SetTrigger("PUNCH");
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J)&& Time.time > nextFireTime)
         {
+            KICK.Play();
+            nextFireTime = (int)Time.time + cooldown;
+            playerAttackObj2.SetActive(true);
+            attackingTimeCount2 = attackingTime;
             Debug.Log("6");
             animator.SetTrigger("KICK");
         }
+        if (attackingTimeCount2 <= 0)
+        {
+            playerAttackObj2.SetActive(false);
+        }
+        attackingTimeCount2 -= Time.deltaTime;
         
     }
-    public bool defending
+    public void CalculateHP2(int incomingDamage)
     {
-        get
-        {
-            return currentState == FighterState.DEFEND;
-        }
-    }
-
-    public bool attacking => currentState == FighterState.KICK
-            || currentState == FighterState.PUNCH;
-    public virtual void TakeDamage2(float damage)
-    {
-        if (defending)
-        {
-            damage *= 0.2f;
-        }
-
-        if (health >= damage)
-        {
-            health -= damage;
-        }
-        else
-        {
-            health = 0;
-        }
-        if (health > 0)
-        {
-            Debug.Log("7");
-            animator.SetTrigger("HIT");
-        }
+        Debug.Log("incomingDamage " + incomingDamage);
+        CurrentHP2 += incomingDamage;
+        healthBar.SetHealth(CurrentHP2);
+        animator.SetTrigger("HIT");
+        PUNCH.Play();
     }
 }

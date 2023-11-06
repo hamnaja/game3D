@@ -21,6 +21,7 @@ public class Fighter2 : MonoBehaviour
     [SerializeField] private GameObject ENDGAME;
     [SerializeField] private AudioSource PUNCH;
     [SerializeField] private AudioSource KICK;
+
     void Start()
     {
         ENDGAME.SetActive(false);
@@ -29,7 +30,7 @@ public class Fighter2 : MonoBehaviour
         mybody = GetComponent<Rigidbody>();
         playerAttackObj2.SetActive(false);
         animator = GetComponent<Animator>();
-        capsule = GetComponent<CapsuleCollider>();
+
     }
     void Update()
     {
@@ -98,5 +99,6 @@ public class Fighter2 : MonoBehaviour
         healthBar.SetHealth(CurrentHP2);
         animator.SetTrigger("HIT");
         PUNCH.Play();
+        
     }
 }

@@ -9,6 +9,7 @@ public class StateBehavior2 : StateMachineBehaviour
     [SerializeField] private float horizontalForce;
     [SerializeField] private float verticalForce;
     [SerializeField] private protected Fighter2 fighter2;
+
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
@@ -23,6 +24,6 @@ public class StateBehavior2 : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        fighter2.mybody.AddRelativeForce(new Vector3(horizontalForce, 0, 0));
+        fighter2.mybody.AddRelativeForce(new Vector3(horizontalForce, 0, 0) * Time.deltaTime * 100);
     }
 }

@@ -716,7 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviorState: 2
   soundEffect: {fileID: 0}
-  horizontalForce: 20
+  horizontalForce: 150
   verticalForce: 0
   fighter2: {fileID: 0}
 --- !u!1101 &4903906489481263451
@@ -828,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviorState: 3
   soundEffect: {fileID: 0}
-  horizontalForce: 50
+  horizontalForce: 150
   verticalForce: 0
   fighter2: {fileID: 0}
 --- !u!114 &7183939521954402589
@@ -845,7 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   behaviorState: 1
   soundEffect: {fileID: 0}
-  horizontalForce: -20
+  horizontalForce: -150
   verticalForce: 0
   fighter2: {fileID: 0}
 --- !u!114 &7427468473635890026

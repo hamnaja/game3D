@@ -22,7 +22,7 @@ public class StateBehavior : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        fighter1.mybody.AddRelativeForce(new Vector3(horizontalForce,0,0));
+        fighter1.mybody.AddRelativeForce(new Vector3(horizontalForce,0,0)*Time.deltaTime *100);
         
     }
 }

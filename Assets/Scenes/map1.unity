@@ -261,7 +261,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 811344065}
+    m_TransformParent: {fileID: 919132149384897426}
     m_Modifications:
     - target: {fileID: 1324242635902219049, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_Range
@@ -281,15 +281,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.039999
+      value: -0.960001
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.35911894
+      value: 4.640881
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -330,6 +330,10 @@ PrefabInstance:
     - target: {fileID: 3286184312766171272, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_Name
       value: CFXR4 Explosion Quick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286184312766171272, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5662412904704983821, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: clearBehavior
@@ -403,6 +407,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &124146020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6003182192445062905, guid: d29bbf457ea1be44dae8b8138c02310f, type: 3}
+  m_PrefabInstance: {fileID: 2631420828459972291}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &131098331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1251,11 @@ Transform:
   m_Father: {fileID: 1151963933}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &711293989 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8632055958874330854, guid: c92955c77dd11b04e9dd994fbdf5bb89, type: 3}
+  m_PrefabInstance: {fileID: 1930555202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &717811201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,7 +2220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e9391f622091e1449bdef4ef15af4948, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e9391f622091e1449bdef4ef15af4948, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3366,6 +3380,8 @@ MonoBehaviour:
   ENDGAME: {fileID: 717811201}
   PUNCH: {fileID: 1566559122}
   KICK: {fileID: 1566559123}
+  effect: {fileID: 2085782903}
+  handTransform: {fileID: 711293989}
 --- !u!136 &1566559118
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4409,7 +4425,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 939858564}
+    m_TransformParent: {fileID: 1566559120}
     m_Modifications:
     - target: {fileID: 1324242635902219049, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_Range
@@ -4429,15 +4445,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.11
+      value: -2.1100006
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.69
+      value: 4.31
       objectReference: {fileID: 0}
     - target: {fileID: 3286184312766171269, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4479,6 +4495,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFXR4 Explosion Quick
       objectReference: {fileID: 0}
+    - target: {fileID: 3286184312766171272, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5662412904704983821, guid: ad535ba57db640e48a6dc1c468875df7, type: 3}
       propertyPath: clearBehavior
       value: 0
@@ -4512,6 +4532,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: e9391f622091e1449bdef4ef15af4948, type: 3}
       propertyPath: m_Name
       value: CFX4 Hit B (Orange)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: e9391f622091e1449bdef4ef15af4948, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e9391f622091e1449bdef4ef15af4948, type: 3}
       propertyPath: m_RootOrder
@@ -4700,6 +4724,8 @@ MonoBehaviour:
   ENDGAME: {fileID: 424324161}
   PUNCH: {fileID: 919132149384897428}
   KICK: {fileID: 919132149384897429}
+  effect: {fileID: 1385520250}
+  handTransform: {fileID: 124146020}
 --- !u!95 &919132149384897423 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2631420827825922874, guid: d29bbf457ea1be44dae8b8138c02310f, type: 3}
@@ -4926,6 +4952,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &919132149384897430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149384897421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f1f55bee536e241bf8a029c43d4d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinking: 10
+  ocolor:
+    r: 1
+    g: 0
+    b: 0
+    a: 0
+  delay: 0.5
 --- !u!1001 &2631420828459972291
 PrefabInstance:
   m_ObjectHideFlags: 0

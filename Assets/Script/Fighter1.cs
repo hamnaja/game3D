@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 public class Fighter1 : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Fighter1 : MonoBehaviour
     [SerializeField] private GameObject ENDGAME;
     [SerializeField] private AudioSource PUNCH;
     [SerializeField] private AudioSource KICK;
+    [SerializeField] private GameObject effect;
+    [SerializeField] private Transform handTransform;
     void Start()
     {
         ENDGAME.SetActive(false);
@@ -30,6 +33,7 @@ public class Fighter1 : MonoBehaviour
         playerAttackObj1.SetActive(false);
         animator = GetComponent<Animator>();
         capsule = GetComponent<CapsuleCollider>();
+
     }
     void Update()
     {
@@ -92,10 +96,12 @@ public class Fighter1 : MonoBehaviour
     }
     public void CalculateHP1(int incomingDamage)
     {
+        Instantiate(effect, handTransform.position, Quaternion.identity);
         Debug.Log("incomingDamage " + incomingDamage);
         CurrentHP1 += incomingDamage;
         healthBar.SetHealth(CurrentHP1);
         animator.SetTrigger("HIT");
         PUNCH.Play();
+
     }
 }

@@ -24,7 +24,8 @@ public class AttackObject2 : MonoBehaviour
         {
             Fighter2 monHP = other.gameObject.GetComponent<Fighter2>();
             monHP.CalculateHP2(-attackDamage2);
-            
+           
+           
             
         }
     }

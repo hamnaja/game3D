@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 public class Fighter2 : MonoBehaviour
 {
@@ -21,9 +22,12 @@ public class Fighter2 : MonoBehaviour
     [SerializeField] private GameObject ENDGAME;
     [SerializeField] private AudioSource PUNCH;
     [SerializeField] private AudioSource KICK;
+    [SerializeField] private GameObject effect;
 
+    [SerializeField] private Transform handTransform;
     void Start()
     {
+        
         ENDGAME.SetActive(false);
         CurrentHP2 = MAX_HEALTH;
         healthBar.SetMaxHealth(MAX_HEALTH);
@@ -94,6 +98,7 @@ public class Fighter2 : MonoBehaviour
     }
     public void CalculateHP2(int incomingDamage)
     {
+        Instantiate(effect, handTransform.position, Quaternion.identity);
         Debug.Log("incomingDamage " + incomingDamage);
         CurrentHP2 += incomingDamage;
         healthBar.SetHealth(CurrentHP2);

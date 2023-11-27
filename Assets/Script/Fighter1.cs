@@ -41,6 +41,7 @@ public class Fighter1 : MonoBehaviour
         {
             ENDGAME.SetActive(true);
             animator.SetTrigger("DEAD");
+            Time.timeScale = 0f;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {

@@ -14,6 +14,11 @@ public class Manu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
     }
+    public void toturial1()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(5);
+    }
     public void Map1()
     {
         Time.timeScale = 1f;
@@ -26,6 +31,7 @@ public class Manu : MonoBehaviour
     }
     public void credit()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(4);
     }
     public void OnQuit1Button()
